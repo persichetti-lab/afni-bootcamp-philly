@@ -3,32 +3,51 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Body font */
 body {
   font-family: 'Lora', serif;
   margin: 0;
 }
 
+/* Fixed navbar on top */
 nav {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* Full-width image sections */
+.full-width-image {
+  padding: 0;       /* remove top/bottom/side padding */
+  margin: 0;        /* remove margin */
+  width: 100vw;     /* full viewport width */
+  overflow: hidden; /* remove horizontal scrollbars */
+}
+
+.full-width-image img {
+  width: 100%;      /* stretch to full width */
+  height: auto;     /* maintain aspect ratio */
+  display: block;   /* remove inline spacing */
+}
+
+/* Map styling in directions section */
+#directions iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  border: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Spacing for any non-full-width sections that could be additionally added */
 section {
   padding: 60px 20px;
 }
 
-h2 {
-  margin-bottom: 30px;
+/* Optional: add a subtle shadow to images */
+.full-width-image img {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-#directions iframe {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
