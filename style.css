@@ -3,37 +3,48 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Body font */
 body {
   font-family: 'Lora', serif;
   margin: 0;
   overflow-x: hidden; /* prevents horizontal scroll */
 }
 
-/* Fixed navbar */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* Transparent navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5); /* 50% opacity */
+  transition: background-color 0.3s ease;
 }
 
-/* Full-width images that fit screen */
+/* Fully transparent navbar (initial) */
+.navbar.transparent {
+  background-color: transparent;
+}
+
+/* Solid navbar on scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Full-width image sections */
 .full-width-image {
-  width: 100%;      /* use 100% of container, not 100vw */
+  width: 100%;
   padding: 0;
   margin: 0;
   overflow: hidden;
 }
 
 .full-width-image img {
-  width: 100%;      /* image stretches to container width */
-  height: auto;     /* maintain aspect ratio */
-  display: block;   /* remove inline spacing */
+  width: 100%;     /* stretch image horizontally */
+  height: auto;    /* maintain aspect ratio */
+  display: block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Map styling */
+/* Directions map styling */
 #directions iframe {
   width: 100%;
-  max-width: 100%;   /* ensure iframe never exceeds screen width */
+  max-width: 100%;
   height: 450px;
   border-radius: 8px;
   border: 0;
@@ -42,14 +53,15 @@ nav {
   margin-bottom: 20px;
 }
 
-/* Section spacing */
+/* Section spacing (for non-full-width content) */
 section {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Optional: subtle image shadow */
-.full-width-image img {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Footer styling */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
 }
-
