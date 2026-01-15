@@ -2,42 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jefferson AFNI Bootcamp</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>AFNI Bootcamp</title>
+
+  <!-- Bootstrap 4 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Cabin:700" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#poster">Home</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#directions">Directions</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">AFNI Bootcamp</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#poster">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="#directions">Directions</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- Poster section -->
-  <section id="poster">
-    <h1>AFNI Bootcamp</h1>
-    <img src="images/afni_poster.png" alt="AFNI Bootcamp Poster">
+  <!-- Poster Section -->
+  <section id="poster" class="text-center" style="padding-top:100px;">
+    <img src="images/Afni_Bootcamp_Poster.png" alt="AFNI Bootcamp Poster" class="img-fluid">
   </section>
 
-  <!-- Schedule section -->
-  <section id="schedule">
+  <!-- Schedule Section -->
+  <section id="schedule" class="text-center my-5">
     <h2>Schedule</h2>
-    <img src="images/schedule.png" alt="Bootcamp Schedule">
+    <img src="images/Afni_Schedule.png" alt="AFNI Bootcamp Schedule" class="img-fluid">
   </section>
 
-  <!-- Directions section -->
-  <section id="directions">
+  <!-- Directions Section -->
+  <section id="directions" class="text-center my-5">
     <h2>Directions</h2>
-    <p>
-      The workshop will be held at:
-      <br><strong>Put Jefferson Building Here</strong>
-    </p>
-    <p>
-      <a href="https://maps.google.com">View on Google Maps</a>
-    </p>
+    <p>Put Jefferson Neuroscience Building Here</p>
+    <p><a href="https://maps.google.com" target="_blank">View on Google Maps</a></p>
   </section>
 
+  <!-- Footer -->
+  <footer class="text-center py-3 bg-light">
+    <p>&copy; Your Lab 2026</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
