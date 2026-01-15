@@ -1,3 +1,8 @@
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Lora', serif;
   margin: 0;
@@ -20,4 +25,10 @@ h2 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+#directions iframe {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
