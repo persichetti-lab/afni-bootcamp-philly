@@ -81,3 +81,39 @@ section {
   padding-bottom: 40px;
 }
 
+/* =========================
+   BACKGROUND IMAGE WITH OVERLAY TEXT
+   ========================= */
+
+.image-background-section {
+  background-image: url("images/Afni_Directions.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;              /* fits one screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 20px;            /* space for navbar + mobile */
+}
+
+/* Text overlay */
+.overlay-text {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #000;
+
+  background-color: rgba(255, 255, 255, 0.75); /* makes text readable */
+  padding: 30px 40px;
+  max-width: 800px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Paragraph spacing inside overlay */
+.overlay-text p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
