@@ -41,21 +41,32 @@ body {
   overflow: hidden;
 }
 
-/* KEY FIX: constrain height to screen */
+/* Constrain images to fit the screen */
 .full-width-image img {
   width: 100%;
-  max-height: calc(100vh - 80px); /* fit within screen */
-  object-fit: contain;            /* show entire image */
+  max-height: calc(100vh - 80px); /* fit within viewport */
+  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-/*Map Styling*/
+/* =========================
+   POSTER BACKGROUND COLOR
+   ========================= */
+
+#poster {
+  background-color: #B6FDC9;
+  min-height: 100vh; /* ensures background fills screen */
+}
+
+/* =========================
+   MAP STYLING
+   ========================= */
 
 #register iframe {
   width: 100%;
-  height: 60vh;       /* responsive height */
-  max-height: 500px;  /* prevents giant maps */
+  height: 60vh;
+  max-height: 500px;
   border: 0;
   border-radius: 8px;
   display: block;
@@ -69,3 +80,4 @@ body {
 section {
   padding-bottom: 40px;
 }
+
