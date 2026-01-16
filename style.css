@@ -1,127 +1,79 @@
-/* =========================
-   SMOOTH SCROLLING
-   ========================= */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* =========================
-   BODY
-   ========================= */
+/* Body font */
 body {
   font-family: 'Lora', serif;
   margin: 0;
-  overflow-x: hidden; /* prevents horizontal scroll */
+  overflow-x: hidden;
 }
 
 /* =========================
    NAVBAR
-   ========================= */
-
-/* Transparent navbar */
+========================= */
 .navbar {
   background-color: rgba(255, 255, 255, 0.5);
   transition: background-color 0.3s ease;
 }
-
-/* Fully transparent navbar (initial) */
-.navbar.transparent {
-  background-color: transparent;
-}
-
-/* Solid navbar on scroll */
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-}
+.navbar.transparent { background-color: transparent; }
+.navbar.scrolled { background-color: rgba(255, 255, 255, 0.95); }
 
 /* =========================
-   FULL-WIDTH IMAGE SECTIONS (Poster & Schedule)
-   ========================= */
-
+   FULL-WIDTH IMAGE SECTIONS
+========================= */
 .full-width-image {
   width: 100%;
   margin: 0;
-  padding-top: 80px; /* space for fixed navbar */
+  padding-top: 80px;
   overflow: hidden;
 }
-
-/* Constrain images to fit the screen */
 .full-width-image img {
   width: 100%;
-  max-height: calc(100vh - 80px); /* fit within viewport */
-  object-fit: contain;
   display: block;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* =========================
-   POSTER BACKGROUND COLOR
-   ========================= */
+/* Poster background color */
+#poster { background-color: #B6FDC9; }
 
-#poster {
-  background-color: #B6FDC9;
-  min-height: 100vh; /* ensures background fills screen */
-}
+/* General section spacing */
+section { padding-bottom: 40px; }
 
 /* =========================
-   MAP STYLING FOR REGISTER SECTION
-   ========================= */
-
-#register iframe {
-  width: 100%;
-  height: 60vh;       /* responsive height */
-  max-height: 500px;  /* prevents giant maps */
-  border: 0;
-  border-radius: 8px;
-  display: block;
-  margin: 20px auto;
-}
-
-/* =========================
-   GENERAL SECTION SPACING
-   ========================= */
-
-section {
-  padding-bottom: 40px;
-}
-
-/* =========================
-   DIRECTIONS SECTION (BACKGROUND IMAGE + TEXT + MAP)
-   ========================= */
-
+   DIRECTIONS SECTION (BACKGROUND IMAGE + OVERLAY TEXT)
+========================= */
 .image-background-section {
   background-image: url("images/Afni_Directions.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  padding-top: 100px;      /* space for navbar */
-  padding-bottom: 50px;    /* space below content */
+  padding: 100px 20px 50px 20px;
 }
 
-/* Text overlay */
 .overlay-text {
   font-family: Arial, sans-serif;
   font-weight: bold;
   color: #000;
-
-  background-color: rgba(255, 255, 255, 0.75); /* readable text */
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 30px 40px;
   max-width: 800px;
   text-align: center;
   border-radius: 8px;
-  margin: 0 auto 30px auto; /* center + space below for map */
+  margin: 0 auto;
 }
 
-/* Paragraph spacing inside overlay */
 .overlay-text p {
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
-/* Map below overlay text */
-.image-background-section iframe {
+/* =========================
+   MAP SECTION
+========================= */
+#map iframe {
   width: 100%;
   height: 60vh;
   max-height: 500px;
