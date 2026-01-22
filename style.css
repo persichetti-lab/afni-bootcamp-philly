@@ -71,19 +71,23 @@ body {
   background-image: url("images/Afni_Events.png");
 }
 
-/* Overlay text */
 .overlay-text {
   font-family: Arial, sans-serif;
   font-weight: bold;
   color: #000;
   font-size: 1.5rem;
   background-color: rgba(255, 255, 255, 0.75);
-  padding: 40px 50px;
-  max-width: 1100px;
-  text-align: center;
+
+  /* Reduce side padding so text reaches near edges */
+  padding: 40px 30px;
+
+  max-width: min(900px, 90vw);
   border-radius: 8px;
+
+  /* Left-align text so it uses full width naturally */
+  text-align: left;
+
   margin: 0 auto;
-  z-index: 2;
 }
 
 .overlay-text p {
