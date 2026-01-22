@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base font */
+/* Body font */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -32,23 +32,26 @@ body {
 }
 
 /* =========================
-   FULL-SCREEN SLIDES
-   (Poster & Schedule)
+   FULL-SCREEN SLIDE SECTIONS
+   (Poster, Schedule, Register, Symposia)
 ========================= */
 
-.full-screen-section {
+.full-screen-section,
+.image-background-section {
   width: 100%;
-  height: 100vh;
+  height: 100vh;                 /* one screen tall */
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding-top: 80px; /* navbar offset */
+  align-items: center;
+  padding-top: 80px;             /* navbar clearance */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
+/* Poster & Schedule images */
 .full-screen-section img {
   max-width: 100%;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 100px);
   object-fit: contain;
   display: block;
 }
@@ -59,25 +62,10 @@ body {
 }
 
 /* =========================
-   IMAGE-BACKGROUND SECTIONS
+   BACKGROUND IMAGE SECTIONS
    (Register & Symposia)
 ========================= */
 
-.image-background-section {
-  min-height: 100vh;
-  padding-top: 100px; /* navbar clearance */
-  padding-bottom: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Individual backgrounds */
 #register {
   background-image: url("images/Afni_Directions.png");
 }
@@ -86,8 +74,14 @@ body {
   background-image: url("images/Afni_Events.png");
 }
 
+.image-background-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* =========================
-   TEXT OVERLAY BOX
+   OVERLAY TEXT BOX
 ========================= */
 
 .overlay-text {
@@ -96,17 +90,14 @@ body {
   color: #000;
   font-size: 1.5rem;
 
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 80px;
 
-  /* WIDER box */
-  max-width: min(1000px, 92vw);
+  width: 90%;
+  max-width: 1400px;
 
-  /* Less side padding = wider text */
-  padding: 40px 30px;
-
-  margin: 0 auto;
-  text-align: left;
+  text-align: center;
+  border-radius: 10px;
 }
 
 /* Paragraph spacing */
@@ -115,9 +106,10 @@ body {
   line-height: 1.6;
 }
 
-/* Optional centered call-to-action */
-.overlay-text .centered {
-  text-align: center;
+/* Links inside overlay */
+.overlay-text a {
+  color: #000;
+  text-decoration: underline;
 }
 
 /* =========================
@@ -125,14 +117,15 @@ body {
 ========================= */
 
 #map {
+  width: 100%;
   padding: 60px 20px;
-  text-align: center;
+  background-color: #f8f9fa;
 }
 
 #map iframe {
   width: 100%;
   height: 80vh;
-  max-height: 800px;
+  max-height: 900px;
   border: 0;
   border-radius: 8px;
   display: block;
@@ -140,9 +133,9 @@ body {
 }
 
 /* =========================
-   GENERAL SECTION SPACING
+   FOOTER
 ========================= */
 
-section {
-  box-sizing: border-box;
+footer {
+  padding: 20px 0;
 }
