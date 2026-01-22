@@ -1,13 +1,13 @@
 /* =========================
-   GLOBAL
+   SMOOTH SCROLLING
 ========================= */
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Body font */
+/* =========================
+   BODY
+========================= */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -17,125 +17,111 @@ body {
 /* =========================
    NAVBAR
 ========================= */
-
 .navbar {
   background-color: rgba(255, 255, 255, 0.5);
   transition: background-color 0.3s ease;
 }
-
-.navbar.transparent {
-  background-color: transparent;
-}
-
-.navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-}
+.navbar.transparent { background-color: transparent; }
+.navbar.scrolled { background-color: rgba(255, 255, 255, 0.95); }
 
 /* =========================
-   FULL-SCREEN SLIDE SECTIONS
-   (Poster, Schedule, Register, Symposia)
+   FULL-SCREEN SLIDES (POSTER & SCHEDULE)
 ========================= */
-
-.full-screen-section,
-.image-background-section {
+.full-screen-section {
   width: 100%;
-  height: 100vh;                 /* one screen tall */
+  height: 100vh; /* full viewport */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;             /* navbar clearance */
-  box-sizing: border-box;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* Poster & Schedule images */
 .full-screen-section img {
   max-width: 100%;
-  max-height: calc(100vh - 100px);
-  object-fit: contain;
+  max-height: calc(100vh - 80px); /* adjust for navbar */
+  object-fit: contain; /* scale without cropping */
   display: block;
+  margin: 0 auto;
 }
 
 /* Poster background color */
-#poster {
-  background-color: #B6FDC9;
-}
+#poster { background-color: #B6FDC9; }
 
 /* =========================
-   BACKGROUND IMAGE SECTIONS
-   (Register & Symposia)
+   REGISTER & SYMPOSIA SECTIONS
 ========================= */
-
-#register {
-  background-image: url("images/Afni_Directions.png");
-}
-
-#symposia {
-  background-image: url("images/Afni_Events.png");
-}
-
 .image-background-section {
+  width: 100%;
+  height: 100vh; /* full viewport */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 }
 
-/* =========================
-   OVERLAY TEXT BOX
-========================= */
+/* Specific background images */
+#register { background-image: url("images/Afni_Directions.png"); }
+#symposia { background-image: url("images/Afni_Events.png"); }
 
 .overlay-text {
   font-family: Arial, sans-serif;
   font-weight: bold;
   color: #000;
   font-size: 1.5rem;
-
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px 80px;
-
-  width: 90%;
-  max-width: 1400px;
-
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 40px 50px;
+  max-width: 900px; /* wider box for more text */
   text-align: center;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
-/* Paragraph spacing */
+/* Paragraph spacing inside overlay text */
 .overlay-text p {
   margin-bottom: 25px;
   line-height: 1.6;
 }
 
-/* Links inside overlay */
-.overlay-text a {
-  color: #000;
-  text-decoration: underline;
+/* =========================
+   REGISTER BUTTON
+========================= */
+.register-button {
+  display: inline-block;
+  background-color: #c62828; /* deep red */
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.register-button:hover {
+  background-color: #a81f1f;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
 }
 
 /* =========================
    MAP SECTION
 ========================= */
-
 #map {
-  width: 100%;
   padding: 60px 20px;
-  background-color: #f8f9fa;
+  text-align: center;
 }
 
 #map iframe {
   width: 100%;
   height: 80vh;
-  max-height: 900px;
+  max-height: 800px;
   border: 0;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  padding: 20px 0;
 }
