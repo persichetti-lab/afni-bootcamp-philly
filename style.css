@@ -108,6 +108,11 @@ body {
   transform: translateY(-2px);
 }
 
+/* Slightly smaller text on Register page only */
+#register .overlay-text {
+  font-size: 1.35rem; /* was 1.5rem */
+}
+
 /* =========================
    MAP SECTION
 ========================= */
