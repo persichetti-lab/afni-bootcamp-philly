@@ -1,13 +1,13 @@
 /* =========================
-   SMOOTH SCROLLING
+   GLOBAL
 ========================= */
+
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* =========================
-   BODY
-========================= */
+/* Base font */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -21,68 +21,97 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   transition: background-color 0.3s ease;
 }
-.navbar.transparent { background-color: transparent; }
-.navbar.scrolled { background-color: rgba(255, 255, 255, 0.95); }
+
+.navbar.transparent {
+  background-color: transparent;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+}
 
 /* =========================
-   FULL-SCREEN SLIDES (POSTER & SCHEDULE)
+   FULL-SCREEN SLIDES
 ========================= */
 .full-screen-section {
+  height: 100vh;
   width: 100%;
-  height: 100vh; /* full viewport */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 80px; /* navbar offset */
+  box-sizing: border-box;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
 .full-screen-section img {
   max-width: 100%;
-  max-height: calc(100vh - 80px); /* adjust for navbar */
-  object-fit: contain; /* scale without cropping */
+  max-height: calc(100vh - 80px);
+  object-fit: contain;
   display: block;
-  margin: 0 auto;
 }
 
-/* Poster background color */
-#poster { background-color: #B6FDC9; }
+/* Poster background */
+#poster {
+  background-color: #B6FDC9;
+}
 
 /* =========================
-   REGISTER & SYMPOSIA SECTIONS
+   IMAGE BACKGROUND SLIDES
 ========================= */
 .image-background-section {
+  height: 100vh;
   width: 100%;
-  height: 100vh; /* full viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 40px 60px; /* navbar-safe */
+  box-sizing: border-box;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
+
+  overflow: hidden; /* PREVENTS OVERLAP */
 }
 
-/* Specific background images */
-#register { background-image: url("images/Afni_Directions.png"); }
-#symposia { background-image: url("images/Afni_Events.png"); }
+/* Register background */
+#register {
+  background-image: url("images/Afni_Directions.png");
+}
 
+/* Symposia background */
+#symposia {
+  background-image: url("images/Afni_Events.png");
+}
+
+/* =========================
+   WHITE TEXT BOX
+========================= */
 .overlay-text {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: #000;
+
   font-family: Arial, sans-serif;
   font-weight: bold;
-  color: #000;
-  font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 40px 50px;
-  max-width: 900px; /* wider box for more text */
-  text-align: center;
+  font-size: 1.25rem;
+
+  width: 90%;
+  max-width: 1100px;
+
+  padding: 40px 60px;
   border-radius: 8px;
+  text-align: center;
+
+  max-height: calc(100vh - 160px);
+  overflow-y: auto; /* scroll inside box if needed */
+  box-sizing: border-box;
 }
 
-/* Paragraph spacing inside overlay text */
+/* Paragraph spacing */
 .overlay-text p {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
   line-height: 1.6;
 }
 
@@ -91,42 +120,47 @@ body {
 ========================= */
 .register-button {
   display: inline-block;
-  background-color: #c62828; /* deep red */
+  margin-top: 20px;
+  padding: 14px 28px;
+
+  background-color: #c62828;
   color: #fff;
-  font-size: 1.4rem;
-  font-weight: bold;
-  padding: 15px 40px;
-  border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
 }
 
 .register-button:hover {
-  background-color: #a81f1f;
+  background-color: #a61f1f;
   color: #fff;
-  text-decoration: none;
-  transform: translateY(-2px);
-}
-
-/* Slightly smaller text on Register page only */
-#register .overlay-text {
-  font-size: 1.35rem; /* was 1.5rem */
 }
 
 /* =========================
    MAP SECTION
 ========================= */
 #map {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  background-color: #fff;
 }
 
 #map iframe {
   width: 100%;
+  max-width: 1200px;
   height: 80vh;
   max-height: 800px;
   border: 0;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  font-size: 0.9rem;
 }
