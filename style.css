@@ -138,20 +138,26 @@ body {
 ========================= */
 .contact-line {
   text-align: center;
-  padding: 30px 20px;
-  font-size: 1rem;
-  background-color: #f8f9fa;
+  padding: 40px 20px;
+  background-color: #e9f7ef; /* soft, academic highlight */
+  border-top: 2px solid #cfd8dc;
+  border-bottom: 2px solid #cfd8dc;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
 }
 
 .contact-line a {
   color: #000;
+  text-decoration: underline;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .contact-line a:hover {
-  text-decoration: underline;
+  color: #c62828; /* subtle tie-in with Register button */
 }
+
 
 /* =========================
    MAP SECTION
