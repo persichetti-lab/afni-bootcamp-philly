@@ -186,21 +186,15 @@ footer {
    RECEPTION 
 ========================= */
 #reception {
+  background-image: url("images/AFNI_Reception_Image.png");
+  position: relative;
+
+  /* Make the background image scale like the schedule poster */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: flex-start; /* top-aligns the image */
-  justify-content: center;
-  padding-top: 40px;
-  box-sizing: border-box;
-  position: relative;
-}
-
-#reception img {
-  max-width: 100%;
-  max-height: calc(100vh - 20px); /* slightly taller image */
-  object-fit: contain;
-  display: block;
 }
 
 .reception-schedule {
@@ -210,14 +204,14 @@ footer {
   transform: translateX(-50%);
 
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 15px 20px;       /* slightly smaller padding */
+  padding: 20px 30px;
   border-radius: 8px;
 
   text-align: center;
-  font-size: 1.1rem;        /* slightly smaller font */
+  font-size: 1.2rem;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.6;
 
-  max-width: 400px;          /* smaller max width */
-  width: 80%;                /* smaller width on all screens */
+  max-width: 600px;
+  width: 90%;
 }
