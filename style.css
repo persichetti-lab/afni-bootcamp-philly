@@ -197,24 +197,4 @@ footer {
   width: 100%;
 }
 
-.reception-schedule {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translateX(-50%);
 
-  background-color: rgba(255, 255, 255, 0.9);
-
-  /* Smaller padding */
-  padding: 12px 20px;
-  border-radius: 8px;
-
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  line-height: 1.5;
-
-  /* Smaller max width */
-  max-width: 400px;
-  width: 80%;
-}
