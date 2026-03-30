@@ -189,31 +189,32 @@ footer {
 }
 
 /* =========================
-   RECEPTION SECTION
+   RECEPTION SECTION (smaller image)
 ========================= */
 #reception {
   position: relative;
-  height: 100vh;
+  height: 100vh;             /* full viewport height */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: #B6FDC9; /* fallback background */
 }
 
 #reception img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  max-width: 80%;            /* smaller than full width */
+  max-height: 80%;           /* smaller than full height */
+  object-fit: contain;       /* keeps image ratio correct */
+  display: block;
 }
 
 .reception-schedule {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 50%;                  /* vertically center overlay */
+  left: 50%;                 /* horizontally center overlay */
+  transform: translate(-50%, -50%);
+  
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px 30px;
   border-radius: 8px;
@@ -225,4 +226,5 @@ footer {
 
   max-width: 600px;
   width: 90%;
+  z-index: 1;                /* ensure overlay is on top */
 }
