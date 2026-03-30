@@ -188,8 +188,6 @@ footer {
 #reception {
   background-image: url("images/AFNI_Reception_Image.png");
   position: relative;
-
-  /* Make the background image scale like the schedule poster */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
