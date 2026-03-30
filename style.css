@@ -75,10 +75,6 @@ body {
   background-image: url("images/Afni_Directions.png");
 }
 
-#symposia {
-  background-image: url("images/Afni_Events.png");
-}
-
 /* =========================
    OVERLAY TEXT BOX
 ========================= */
@@ -106,10 +102,6 @@ body {
 /* Easy font-size control per section */
 #register .overlay-text {
   font-size: 1.15rem;
-}
-
-#symposia .overlay-text {
-  font-size: 1.25rem;
 }
 
 /* =========================
@@ -183,21 +175,26 @@ footer {
 }
 
 /* =========================
-   RECEPTION
+   SYMPOSIA + RECEPTION (combined)
 ========================= */
-#reception {
+.symposia-reception-section {
   width: 100%;
-  height: 100vh;               /* full viewport height */
+  height: 100vh;
+  background-image: url("images/Afni_Events.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
-  justify-content: center;     /* center horizontally */
-  align-items: center;         /* center vertically */
-  overflow: hidden;            /* prevents scrollbars if image slightly larger */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-#reception img {
-  height: 100%;                /* image fills section vertically */
-  width: auto;                 /* maintain aspect ratio */
-  object-fit: contain;         /* make sure entire image is visible */
-  display: block;              /* remove inline spacing */
+.symposia-reception-section img {
+  height: 90%;
+  width: auto;
+  max-width: 95%;
+  object-fit: contain;
+  display: block;
 }
-
