@@ -194,10 +194,3 @@ footer {
   overflow: hidden;
 }
 
-#reception img {
-  width: auto;
-  height: 100%;
-  object-fit: contain; /* keeps full image visible without stretching */
-}
-
-
