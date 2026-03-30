@@ -28,10 +28,10 @@ body {
 }
 
 /* =========================
-   FULL-SCREEN SECTIONS
+   FULL-SCREEN SLIDES
 ========================= */
 .full-screen-section {
-  position: relative;
+  position: relative; /* for overlay masking */
   height: 100vh;
   width: 100%;
   display: flex;
@@ -39,17 +39,27 @@ body {
   justify-content: center;
   padding-top: 80px; /* navbar offset */
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: hidden; /* ensures blended edges don’t overflow */
 }
 
-/* Front-page Poster */
+/* Poster section */
+#poster {
+  background-color: transparent; /* no solid color */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #poster img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* fully covers section */
   display: block;
 
-  /* Soft edges fade to blend with background */
+  /* Softly fade edges to blend with background */
   -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -78,7 +88,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Individual background images */
+/* Individual backgrounds */
 #register {
   background-image: url("images/Afni_Directions.png");
 }
@@ -106,10 +116,12 @@ body {
   line-height: 1.6;
 }
 
+/* Paragraph spacing */
 .overlay-text p {
   margin-bottom: 20px;
 }
 
+/* Easy font-size control per section */
 #register .overlay-text {
   font-size: 1.15rem;
 }
@@ -145,7 +157,7 @@ body {
 .contact-line {
   text-align: center;
   padding: 40px 20px;
-  background-color: #e9f7ef;
+  background-color: #e9f7ef; /* soft, academic highlight */
   border-top: 2px solid #cfd8dc;
   border-bottom: 2px solid #cfd8dc;
 
@@ -161,7 +173,7 @@ body {
 }
 
 .contact-line a:hover {
-  color: #c62828;
+  color: #c62828; /* subtle tie-in with Register button */
 }
 
 /* =========================
@@ -189,32 +201,19 @@ footer {
 }
 
 /* =========================
-   RECEPTION SECTION (smaller image)
+   RECEPTION (NEW)
 ========================= */
 #reception {
+  background-image: url("images/AFNI_Reception_Image.png");
   position: relative;
-  height: 100vh;             /* full viewport height */
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #B6FDC9; /* fallback background */
-}
-
-#reception img {
-  max-width: 80%;            /* smaller than full width */
-  max-height: 80%;           /* smaller than full height */
-  object-fit: contain;       /* keeps image ratio correct */
-  display: block;
 }
 
 .reception-schedule {
   position: absolute;
-  top: 50%;                  /* vertically center overlay */
-  left: 50%;                 /* horizontally center overlay */
-  transform: translate(-50%, -50%);
-  
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px 30px;
   border-radius: 8px;
@@ -226,5 +225,4 @@ footer {
 
   max-width: 600px;
   width: 90%;
-  z-index: 1;                /* ensure overlay is on top */
 }
