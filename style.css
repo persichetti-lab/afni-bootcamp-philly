@@ -183,14 +183,21 @@ footer {
 }
 
 /* =========================
-   RECEPTION 
+   RECEPTION
 ========================= */
 #reception {
   width: 100%;
-  height: 100vh; /* full viewport height */
+  height: 100vh;               /* full viewport height */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically */
+  overflow: hidden;            /* prevents scrollbars if image slightly larger */
+}
+
+#reception img {
+  height: 100%;                /* image fills section vertically */
+  width: auto;                 /* maintain aspect ratio */
+  object-fit: contain;         /* make sure entire image is visible */
+  display: block;              /* remove inline spacing */
 }
 
