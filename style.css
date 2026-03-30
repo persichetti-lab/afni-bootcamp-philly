@@ -189,34 +189,36 @@ footer {
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: flex-start; /* align image to top */
+  align-items: flex-start; /* top-aligns the image */
   justify-content: center;
-  padding-top: 40px; /* less top padding than Schedule */
+  padding-top: 40px;
   box-sizing: border-box;
   position: relative;
 }
 
 #reception img {
   max-width: 100%;
-  max-height: calc(100vh - 20px); /* slightly taller than before */
+  max-height: calc(100vh - 20px); /* slightly taller image */
   object-fit: contain;
   display: block;
 }
+
+/* smaller, nicely positioned text box */
 .reception-schedule {
   position: absolute;
-  top: 38%;
+  top: 50%; /* vertical center relative to section */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); /* center both horizontally and vertically */
 
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px 30px;
+  padding: 15px 20px; /* smaller padding */
   border-radius: 8px;
 
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 0.85rem; /* smaller but readable */
   font-weight: bold;
-  line-height: 1.6;
+  line-height: 1.4;
 
-  max-width: 600px;
-  width: 90%;
+  max-width: 450px; /* narrower than before */
+  width: 80%;
 }
