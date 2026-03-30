@@ -198,7 +198,7 @@ footer {
 
 #reception img {
   max-width: 100%;
-  max-height: calc(100vh - 80px); /* slightly taller than before */
+  max-height: calc(100vh - 20px); /* slightly taller than before */
   object-fit: contain;
   display: block;
 }
