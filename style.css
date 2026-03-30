@@ -28,7 +28,7 @@ body {
 }
 
 /* =========================
-   FULL-SCREEN SECTIONS
+   FULL-SCREEN SLIDES
 ========================= */
 .full-screen-section {
   height: 100vh;
@@ -38,37 +38,18 @@ body {
   justify-content: center;
   padding-top: 80px; /* navbar offset */
   box-sizing: border-box;
-  position: relative;
-  overflow: hidden; /* ensures images blend */
 }
 
 .full-screen-section img {
   max-width: 100%;
   max-height: calc(100vh - 100px);
-  object-fit: cover;      /* fills container */
+  object-fit: contain;
   display: block;
-  border-radius: 0;
-  /* soft fade edges */
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
 }
 
-/* Poster section background */
+/* Poster background color */
 #poster {
-  background-color: transparent; /* removes hard edges */
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* Optional overlay gradient to blend poster with background */
-#poster::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to bottom, rgba(182,253,201,0) 0%, rgba(182,253,201,1) 100%);
-  pointer-events: none;
+  background-color: #B6FDC9;
 }
 
 /* =========================
@@ -202,28 +183,36 @@ footer {
 }
 
 /* =========================
-   RECEPTION (NEW)
+   RECEPTION 
 ========================= */
 #reception {
   background-image: url("images/AFNI_Reception_Image.png");
-  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
 }
 
-.reception-schedule {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translateX(-50%);
-
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px 30px;
-  border-radius: 8px;
-
-  text-align: center;
-  font-size: 1.2rem;
+#reception .overlay-text {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
   font-weight: bold;
-  line-height: 1.6;
 
-  max-width: 600px;
   width: 90%;
+  max-width: 1000px;
+
+  padding: 40px 50px;
+  border-radius: 8px;
+  text-align: center;
+
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
