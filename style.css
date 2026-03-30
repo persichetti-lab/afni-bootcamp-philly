@@ -198,7 +198,7 @@ footer {
 
 #reception img {
   max-width: 100%;
-  max-height: calc(100vh - 100px); /* same as Schedule */
+  max-height: calc(100vh - 50px); /* same as Schedule */
   object-fit: contain;
   display: block;
 }
