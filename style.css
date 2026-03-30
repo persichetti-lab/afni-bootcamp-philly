@@ -186,15 +186,21 @@ footer {
    RECEPTION 
 ========================= */
 #reception {
-  background-image: url("images/AFNI_Reception_Image.png");
-  position: relative;
-
-  /* Make the background image scale like the schedule poster */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* navbar offset */
+  box-sizing: border-box;
+  position: relative;
+}
+
+#reception img {
+  max-width: 100%;
+  max-height: calc(100vh - 100px); /* same as Schedule */
+  object-fit: contain;
+  display: block;
 }
 
 .reception-schedule {
