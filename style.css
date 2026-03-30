@@ -203,22 +203,21 @@ footer {
   display: block;
 }
 
-/* smaller, nicely positioned text box */
 .reception-schedule {
   position: absolute;
-  top: 50%; /* vertical center relative to section */
+  top: 38%;
   left: 50%;
-  transform: translate(-50%, -50%); /* center both horizontally and vertically */
+  transform: translateX(-50%);
 
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 15px 20px; /* smaller padding */
+  padding: 15px 20px;       /* slightly smaller padding */
   border-radius: 8px;
 
   text-align: center;
-  font-size: 0.85rem; /* smaller but readable */
+  font-size: 1.1rem;        /* slightly smaller font */
   font-weight: bold;
-  line-height: 1.4;
+  line-height: 1.5;
 
-  max-width: 450px; /* narrower than before */
-  width: 80%;
+  max-width: 400px;          /* smaller max width */
+  width: 80%;                /* smaller width on all screens */
 }
