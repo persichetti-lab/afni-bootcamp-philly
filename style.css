@@ -189,20 +189,19 @@ footer {
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* align image to top */
   justify-content: center;
-  padding-top: 80px; /* navbar offset */
+  padding-top: 40px; /* less top padding than Schedule */
   box-sizing: border-box;
   position: relative;
 }
 
 #reception img {
   max-width: 100%;
-  max-height: calc(100vh - 50px); /* same as Schedule */
+  max-height: calc(100vh - 80px); /* slightly taller than before */
   object-fit: contain;
   display: block;
 }
-
 .reception-schedule {
   position: absolute;
   top: 38%;
